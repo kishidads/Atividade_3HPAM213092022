@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/mCoffe"
+        android:enabled="true"
+        android:icon="@drawable/ic_coffe"
+        android:title="Coffe"/>
+    <item
+        android:id="@+id/mDonuts"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_donut_small"
+        android:title="Donuts"/>
+    <item
+        android:id="@+id/mMuffin"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_cake"
+        android:title="Muffin"/>
+    <item
+        android:id="@+id/mTea"
+        android:enabled="true"
+        android:icon="@drawable/ic_tea"
+        android:title="Tea"/>
+</menu>

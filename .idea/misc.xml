@@ -4,9 +4,11 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Laboratorio-Info/AndroidStudioProjects/Atividade_3HPAM213092022/app/src/main/res/layout/activity_main.xml" value="0.28940217391304346" />
-        <entry key="..\:/Users/Laboratorio-Info/AndroidStudioProjects/Atividade_3HPAM213092022/app/src/main/res/layout/fragment_coffee.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/Laboratorio-Info/AndroidStudioProjects/Atividade_3HPAM213092022/app/src/main/res/layout/fragment_coffee.xml" value="0.1" />
+        <entry key="..\:/Users/Laboratorio-Info/AndroidStudioProjects/Atividade_3HPAM213092022/app/src/main/res/layout/fragment_donuts.xml" value="0.358695652173913" />
         <entry key="..\:/Users/Laboratorio-Info/AndroidStudioProjects/Atividade_3HPAM213092022/app/src/main/res/layout/fragment_muffin.xml" value="0.35260416666666666" />
         <entry key="..\:/Users/Laboratorio-Info/AndroidStudioProjects/Atividade_3HPAM213092022/app/src/main/res/layout/fragment_tea.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/Laboratorio-Info/AndroidStudioProjects/Atividade_3HPAM213092022/app/src/main/res/menu/menu_drawer.xml" value="0.365625" />
       </map>
     </option>
   </component>
