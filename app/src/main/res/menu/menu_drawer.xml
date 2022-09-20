@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/mCoffe"
+        android:id="@+id/mJuice"
         android:enabled="true"
-        android:icon="@drawable/ic_coffe"
-        android:title="Coffe"/>
+        android:icon="@drawable/ic_juice"
+        android:title="Sucos"/>
     <item
-        android:id="@+id/mDonuts"
+        android:id="@+id/mIceCream"
         android:enabled="true"
-        android:icon="@drawable/ic_baseline_donut_small"
+        android:icon="@drawable/ic_icecream"
+        android:title="Sorvetes"/>
+    <item
+        android:id="@+id/mCake"
+        android:enabled="true"
+        android:icon="@drawable/ic_cake"
+        android:title="Bolos"/>
+    <item
+        android:id="@+id/mDonut"
+        android:enabled="true"
+        android:icon="@drawable/ic_donut"
         android:title="Donuts"/>
-    <item
-        android:id="@+id/mMuffin"
-        android:enabled="true"
-        android:icon="@drawable/ic_baseline_cake"
-        android:title="Muffin"/>
-    <item
-        android:id="@+id/mTea"
-        android:enabled="true"
-        android:icon="@drawable/ic_tea"
-        android:title="Tea"/>
 </menu>
