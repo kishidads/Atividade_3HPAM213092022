@@ -10,46 +10,10 @@ android:orientation="vertical"
 android:padding="20dp"
 tools:context=".DonutFragment">
 
-<com.google.android.material.card.MaterialCardView
-    android:layout_width="350dp"
-    android:layout_height="450dp"
-    android:backgroundTint="#f6e2bb"
-    app:cardCornerRadius="10dp">
-
-    <LinearLayout
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/id_recyclerViewDonut"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_margin="20sp"
-            android:text="Donut"
-            android:textColor="#fff"
-            android:textSize="30sp"
-            android:textStyle="bold" />
-
-        <ImageView
-            android:layout_width="300dp"
-            android:layout_height="200dp"
-            android:layout_gravity="center_horizontal"
-            android:scaleType="centerCrop"
-            android:src="@drawable/img_donut" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_margin="20sp"
-            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget venenatis elit. Pellentesque arcu nisi, consectetur id neque in, vestibulum ultricies sapien. Nam euismod turpis a dolor gravida, ornare sodales."
-            android:textColor="#fff" />
-
-
-    </LinearLayout>
-</com.google.android.material.card.MaterialCardView>
-
+        android:layout_height="wrap_content" />
 
 </LinearLayout>
 
