@@ -14,14 +14,12 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
-public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.MyViewHolder> {
+public class IceCreamRecyclerViewAdapter extends RecyclerView.Adapter<IceCreamRecyclerViewAdapter.MyViewHolder> {
 
-    private Context mContext; //É a classe onde estou
-    private List<Juice> mData; //O objeto que irá representar os dados
+    private Context mContext;
+    private List<IceCream> mData;
 
-
-    //Construtor da classe
-    public RecyclerViewAdapter(Context mContext, List<Juice> mData) {
+    public IceCreamRecyclerViewAdapter(Context mContext, List<IceCream> mData) {
         this.mContext = mContext;
         this.mData = mData;
     }
@@ -33,23 +31,20 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         View view;
 
         LayoutInflater mInflater = LayoutInflater.from(mContext);
-        view = mInflater.inflate(R.layout.cardview_item_livros, parent, false);
+        view = mInflater.inflate(R.layout.icecream_cardview, parent, false);
 
         return new MyViewHolder(view);
     }
 
-    //Será realizada a montagem dos dados.
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, final int position) {
-        //passando valores para o RecyclerView
-        holder.tvTituloLivro.setText(mData.get(position).getTitulo());
-        holder.imgLivro.setImageResource(mData.get(position).getMiniatura());
-        //Evento de clique no cardView
+        holder.titulo.setText(mData.get(position).getTitulo());
+        holder.img.setImageResource(mData.get(position).getMiniatura());
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                Intent intent = new Intent(mContext, Livro_Activity.class);
+                Intent intent = new Intent(mContext, IceCream_Activity.class);
 
                 intent.putExtra("Titulo", mData.get(position).getTitulo());
                 intent.putExtra("Descricao", mData.get(position).getDescricao());
@@ -63,14 +58,13 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     @Override
     public int getItemCount() {
-        //tamanho da lista de livros
         return mData.size();
     }
 
     public static class MyViewHolder extends RecyclerView.ViewHolder {
 
-        TextView tvTituloLivro;
-        ImageView imgLivro;
+        TextView titulo;
+        ImageView img;
         CardView cardView;
 
 
@@ -78,11 +72,11 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
             super(itemView);
 
-            tvTituloLivro = itemView.findViewById(R.id.id_lblTituloLivro);
-            imgLivro = itemView.findViewById(R.id.id_imgLivro);
-            cardView = itemView.findViewById(R.id.idCardView);
-
+            titulo= itemView.findViewById(R.id.cardTitulo);
+            img = itemView.findViewById(R.id.cardImg);
+            cardView = itemView.findViewById(R.id.cardView);
 
         }
     }
 }
+

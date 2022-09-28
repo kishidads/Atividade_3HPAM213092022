@@ -17,41 +17,30 @@ public class JuiceFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_juice, container, false);
 
-        return view;
+        View view = inflater.inflate(R.layout.juice_fragment, container, false);
 
         List<Juice> id_recyclerViewJuice;
 
-            //Inserindo os livros no arrayList vazio
-            id_recyclerViewJuice = new ArrayList<>();
+        id_recyclerViewJuice = new ArrayList<>();
 
-            id_recyclerViewJuice.add(new Juice("Teste", "Teste", "Teste", R.drawable.img_juice));
-            id_recyclerViewJuice.add(new Juice("Teste", "Teste", "Teste", R.drawable.img_juice));
-            id_recyclerViewJuice.add(new Juice("Teste", "Teste", "Teste", R.drawable.img_juice));
-            id_recyclerViewJuice.add(new Juice("Teste", "Teste", "Teste", R.drawable.img_juice));
-            id_recyclerViewJuice.add(new Juice("Teste", "Teste", "Teste", R.drawable.img_juice));
-            id_recyclerViewJuice.add(new Juice("Teste", "Teste", "Teste", R.drawable.img_juice));
+        id_recyclerViewJuice.add(new Juice("Cenoura", "Teste", "Teste", R.drawable.img_carrotjuice));
+        id_recyclerViewJuice.add(new Juice("Laranja", "Teste", "Teste", R.drawable.img_orangejuice));
+        id_recyclerViewJuice.add(new Juice("Verde", "Teste", "Teste", R.drawable.img_greenjuice));
+        id_recyclerViewJuice.add(new Juice("Ervas", "Teste", "Teste", R.drawable.img_herbjuice));
+        id_recyclerViewJuice.add(new Juice("Amoras", "Teste", "Teste", R.drawable.img_berriesjuice));
+        id_recyclerViewJuice.add(new Juice("Toranja", "Teste", "Teste", R.drawable.img_grapefruitjuice));
 
-            //declarando a variavel xml enviando para o java
-            RecyclerView mRecyclerView = findViewById(R.id.id_recyclerViewJuice);
+        RecyclerView mRecyclerView = view.findViewById(R.id.id_recyclerViewJuice);
 
-            //Instânciando o adaptador com os valores necessários
-            RecyclerViewAdapter mAdapter = new RecyclerViewAdapter(getApplicationContext(), id_recyclerViewJuice);
-            //Criando o layout para inserção dos valores
+        JuiceRecyclerViewAdapter mAdapter = new JuiceRecyclerViewAdapter(getContext(), id_recyclerViewJuice);
 
-            //LayoutManager não é necessário inserção de colunas - pode ser utilizado na vertical ou horizontal
-            // mRecyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext(), RecyclerView.HORIZONTAL,true));
+        mRecyclerView.setLayoutManager(new GridLayoutManager(getContext(), 2));
 
-            //GriLayoutManager necessário a inserção de colunas
-            mRecyclerView.setLayoutManager(new GridLayoutManager(getApplicationContext(), 2));
+        mRecyclerView.setHasFixedSize(true);
 
-            //Para melhorar a performance do RecyclerView na listagem com um tamanho fixo
-            mRecyclerView.setHasFixedSize(true);
+        mRecyclerView.setAdapter(mAdapter);
 
-            //Inserindo os valores na lista do RecyclerView
-            mRecyclerView.setAdapter(mAdapter);
-
+        return view;
     }
 }

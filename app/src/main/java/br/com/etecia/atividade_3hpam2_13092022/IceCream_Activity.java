@@ -13,8 +13,8 @@ import androidx.appcompat.widget.Toolbar;
 
 public class IceCream_Activity extends AppCompatActivity {
 
-    private TextView txtTitulo, txtDescricao, txtCategoria;
-    private ImageView imgIceCream;
+    private TextView cardTitulo, cardDescricao, cardCategoria;
+    private ImageView cardImg;
 
 
     @Override
@@ -22,10 +22,10 @@ public class IceCream_Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.icecream_card);
 
-        txtTitulo = findViewById(R.id.txtIdTitulo);
-        txtDescricao = findViewById(R.id.txtIdDescricao);
-        txtCategoria = findViewById(R.id.txtIdCategoria);
-        imgIceCream = findViewById(R.id.idImgLivroN);
+        cardTitulo = findViewById(R.id.cardTitulo);
+        cardDescricao = findViewById(R.id.cardDescricao);
+        cardCategoria = findViewById(R.id.cardCategoria);
+        cardImg = findViewById(R.id.cardImg);
 
         //Intent que irá receber os valores da outra janela.
         Intent intent = getIntent();
@@ -39,10 +39,10 @@ public class IceCream_Activity extends AppCompatActivity {
         categoria = intent.getExtras().getString("Categoria");
         miniatura = intent.getExtras().getInt("Miniatura");
 
-        txtTitulo.setText(titulo);
-        txtDescricao.setText(descricao);
-        txtCategoria.setText(categoria);
-        imgIceCream.setImageResource(miniatura);
+        cardTitulo.setText(titulo);
+        cardDescricao.setText(descricao);
+        cardCategoria.setText(categoria);
+        cardImg.setImageResource(miniatura);
 
     }
 }
